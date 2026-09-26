@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "ScamShield AI",
+  "version": "1.0",
+  "description": "Zero-friction protection against UPI scams and fake shopping storefronts.",
+  "permissions": ["tabs", "scripting", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
