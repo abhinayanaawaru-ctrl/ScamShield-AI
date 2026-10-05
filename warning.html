@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ScamShield AI warning</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    font-family: system-ui, sans-serif; text-align: center; padding: 24px; box-sizing: border-box; }
+  body.yellow { background: #FFF4C2; color: #5c4a00; }
+  body.red { background: #7a0c0c; color: #fff; }
+  body.black { background: #000; color: #fff; }
+  .card { max-width: 560px; }
+  h1 { font-size: 30px; margin: 0 0 12px; }
+  .url { word-break: break-all; opacity: .8; font-family: monospace; margin: 12px 0; }
+  button { cursor: pointer; border: 0; border-radius: 8px; padding: 12px 20px; font-size: 16px; margin: 8px; }
+  #safe { background: #fff; color: #000; font-weight: 600; }
+  body.yellow #safe { background: #F5B800; }
+  #go { background: transparent; color: inherit; border: 1px solid currentColor; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="title"></h1>
+    <p id="reason"></p>
+    <p id="tip"></p>
+    <div class="url" id="url"></div>
+    <button id="safe">Take me to safety</button>
+    <button id="go" hidden>Continue anyway</button>
+  </div>
+  <script src="warning.js"></script>
+</body>
+</html>

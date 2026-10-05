@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ScamShield AI",
+  "version": "0.1.0",
+  "description": "A zero-click digital seatbelt that warns you before online fraud.",
+  "permissions": ["webNavigation", "tabs", "storage"],
+  "host_permissions": ["https://rdap.org/*", "https://*.rdap.org/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["rules.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": []
+}
